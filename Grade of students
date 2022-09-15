@@ -1,0 +1,45 @@
+#include<stdio.h>
+struct student
+{
+    char name[50];
+    int roll,m1,m2,m3,m4;
+    
+} s;
+void main()
+{
+    int tot;
+    float avg;
+    printf("enter name=");
+    fgets(s.name,sizeof(s.name), stdin);
+    printf("enter roll number=");
+    scanf("%d",&s.roll);
+    printf("enter the marks in Python=");
+    scanf("%d",&s.m1);
+    printf("enter the marks in C programming=");
+    scanf("%d",&s.m2);
+    printf("enter the marks in Mathematics=");
+    scanf("%d",&s.m3);
+    printf("enter the marks in Physics=");
+    scanf("%d",&s.m4);
+    tot=s.m1+s.m2+s.m3+s.m4;
+    printf("total marks=%d\n",tot);
+    avg=tot/4;
+    printf("Aggregate=%.1f\n",avg);
+    if(avg>75)
+    {
+        printf("DISTINCTION");
+    }
+    else if(60<=avg<75)
+    {
+        printf("FIRST DIVISION");
+    }
+    else if(50<=avg<60)
+    {
+        printf("SECOND DIVISION");
+    }
+    else if(40<=avg<50)
+    {
+        printf("THIRD DIVISION");
+    }
+    return 0;
+}
